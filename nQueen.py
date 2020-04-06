@@ -2,7 +2,7 @@
 # Problem using backtracking 
 
 # global N
-N = 4
+# N = 4
 
 def printSolution(board):    
 	for i in range(N): 
@@ -54,17 +54,8 @@ def solveNQ():
 	global N
 	
 	N = int(input())
-	r, c = (N, N) 
-	board = [[0]*c]*r
-
-	# board = [ [0, 0, 0, 0], 
-    #           [0, 0, 0, 0], 
-    #           [0, 0, 0, 0], 
-    #           [0, 0, 0, 0] 
-    #         ] 
-  
-
-
+	board = [[0 for i in range(N)]for i in range(N)]
+	print(board)
 	if solveNQUtil(board, 0) == False: 
 		print ("NO")
 		return False
