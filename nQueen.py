@@ -1,7 +1,6 @@
 # Python program to solve N Queen 
 # Problem using backtracking 
 
-global N
 N = 4
 
 def printSolution(board):    
@@ -50,6 +49,7 @@ def solveNQUtil(board, col):
 
 
 def solveNQ():	
+	global N
 	
 	N = int(input())
 	board = [[0 for i in range(N)]for i in range(N)]
