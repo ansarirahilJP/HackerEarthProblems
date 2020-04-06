@@ -1,8 +1,8 @@
 # Python program to solve N Queen 
 # Problem using backtracking 
 
-# global N
-# N = 4
+global N
+N = 4
 
 def printSolution(board):    
 	for i in range(N): 
@@ -45,17 +45,15 @@ def solveNQUtil(board, col):
 			if solveNQUtil(board, col + 1) == True: 
 				return True
 
-			board[i][col] = 0
-	# print(board)
+			board[i][col] = 0	
 	return False
 
 
-def solveNQ():
-	global N
+def solveNQ():	
 	
 	N = int(input())
 	board = [[0 for i in range(N)]for i in range(N)]
-	print(board)
+	
 	if solveNQUtil(board, 0) == False: 
 		print ("NO")
 		return False
